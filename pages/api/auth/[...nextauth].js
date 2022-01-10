@@ -50,7 +50,7 @@ export default async function auth(req, res) {
           },
         },
         async authorize(credentials, req) {
-          debugger;
+          // debugger;
           // database look up
           if (
             credentials.username === 'foo' &&
@@ -83,7 +83,7 @@ export default async function auth(req, res) {
         idToken: true,
         state: true,
         profile: async (profile) => {
-          console.log('kipariss profile is:', profile);
+          // console.log('kipariss profile is:', profile);
           return {
             id: profile.sub,
             // name: profile.name,

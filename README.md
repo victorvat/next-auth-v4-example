@@ -1,7 +1,7 @@
 ### next-auth example
 
-
 #### First, set enviromennt in .env.local
+
 - GITHUB_ID=
 - GITHUB_SECRET=
 - NEXTAUTH_URL=http://localhost/
@@ -20,12 +20,11 @@
 - CUSTOM_OAUTH2_PROVIDER_CLIENT_SECRET=
 - NODE_TLS_REJECT_UNAUTHORIZED=0 (dangerous!! )
 
-
 #### You can use below providers:
-- GitHub 
+
+- GitHub
 - Custom (with any OUATH2 provider)
 - Email (with any email)
 - Credentials (with username + password === 'foo' + 'bar' in this example)
 
 More about [next-auth](https://next-auth.js.org/configuration/options)
-

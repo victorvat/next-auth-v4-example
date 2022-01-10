@@ -65,10 +65,13 @@ export default function SignIn(props) {
           }
           return (
             <Box key={provider.name}>
-              <Button variant="outline" onClick={() => {
-                // debugger;
-                signIn(provider.id);
-              }}>
+              <Button
+                variant="outline"
+                onClick={() => {
+                  // debugger;
+                  signIn(provider.id);
+                }}
+              >
                 Sign in with {provider.name}
               </Button>
             </Box>
@@ -85,7 +88,7 @@ export async function getServerSideProps(context) {
   const session = await getSession({ req });
 
   if (session && res && session.accessToken) {
-    debugger;
+    // debugger;
     res.writeHead(302, {
       Location: '/',
     });
