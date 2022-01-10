@@ -40,9 +40,9 @@ export default async function auth(req, res) {
           username: {
             label: 'Username',
             type: 'text',
-            placeholder: 'victor',
+            placeholder: 'foo',
           },
-          password: { label: 'Password', type: 'password' },
+          password: { label: 'Password', type: 'password', placeholder: 'bar' },
           userinfo: {
             label: 'Userinfo',
             type: 'text',
