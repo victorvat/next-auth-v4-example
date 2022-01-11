@@ -8,7 +8,6 @@ import {
 import {
   Box,
   Button,
-  // Flex,
   Heading,
   Input,
   Container,
@@ -68,7 +67,6 @@ export default function SignIn(props) {
               <Button
                 variant="outline"
                 onClick={() => {
-                  // debugger;
                   signIn(provider.id);
                 }}
               >
@@ -88,7 +86,6 @@ export async function getServerSideProps(context) {
   const session = await getSession({ req });
 
   if (session && res && session.accessToken) {
-    // debugger;
     res.writeHead(302, {
       Location: '/',
     });
@@ -113,7 +110,6 @@ SignIn.getInitialProps = async (context) => {
   const session = await getSession({ req });
 
   if (session && res && session.accessToken) {
-    debugger;
     res.writeHead(302, {
       Location: '/',
     });

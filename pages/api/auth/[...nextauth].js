@@ -10,7 +10,6 @@ const sequelize = new Sequelize('sqlite::memory:');
 sequelize.sync();
 
 export default async function auth(req, res) {
-  // debugger;
   // Do whatever you want here, before the request is passed down to `NextAuth`
   return await NextAuth(req, res, {
     // Configure one or more authentication providers
@@ -50,7 +49,6 @@ export default async function auth(req, res) {
           },
         },
         async authorize(credentials, req) {
-          // debugger;
           // database look up
           if (
             credentials.username === 'foo' &&
@@ -140,15 +138,8 @@ export default async function auth(req, res) {
     },
 
     adapter: SequelizeAdapter(sequelize),
-    // adapter: SequelizeAdapter(sequelize, {
-    //   models: {
-    //     User: sequelize.define("user", {
-    //       ...models.User,
-    //       phoneNumber: DataTypes.STRING,
-    //     }),
-    //   },
-    // }),
 
+    // Uncomment if custom signing page is needed
     // pages: {
     //   signIn: '/signin',
     // },
